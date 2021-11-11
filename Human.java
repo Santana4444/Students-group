@@ -54,6 +54,5 @@ public class Human {
 		return "Personal Information: lastName -" + lastName + 
 				", firstName -" + firstName +
 				", age -" + age + "year old, gender -" + gender + ".";
+		}
 	}
-		
-}
