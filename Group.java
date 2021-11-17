@@ -58,6 +58,11 @@ public class Group {
 					
 		}
 	}
+	
+	public void sortStudentsByLastName() {
+	Arrays.sort(stud,Comparator.nullsLast(new SortStudentsByLastNameComparator()));
+	}
+
 
 	public Student searchByLastName (String lastName) {
 		for (Student student : stud) {
