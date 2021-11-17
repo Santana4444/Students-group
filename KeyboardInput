@@ -1,0 +1,117 @@
+package sample;
+
+import javax.swing.JOptionPane;
+
+public class KeyboardInput {
+	
+	public KeyboardInput() {
+		super();
+	}
+			
+	public String insertLastName() {
+		String lastName = "";
+		for (;;) {
+			try {
+				lastName = String.valueOf(JOptionPane.showInputDialog("Enter Last name"));
+				break;
+			} catch (NullPointerException e) {
+				break;
+			}
+		}
+		System.out.println(lastName);
+		return lastName;
+	}
+	
+	public String insertFirstName() {
+		String firstName = "";
+		for (;;) {
+			try {
+				firstName = String.valueOf(JOptionPane.showInputDialog("Enter First name"));
+				break;
+			} catch (NullPointerException e) {
+				break;
+			}
+		}
+		System.out.println(firstName);
+		return firstName;
+	}
+	
+	public byte insertAge() {
+		byte age = 0;
+		for (;;) {
+			try {
+				age = Byte.valueOf(JOptionPane.showInputDialog("Enter age "));
+				break;
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Error number format");
+
+			} catch (NullPointerException e) {
+				break;
+			}
+		}
+		System.out.println(age);
+		return age;
+	}
+	
+	public String insertGender() {
+		String gender = "MALE";
+		for (;;) {
+			try {
+				JOptionPane.showConfirmDialog(null, "Male?", "Yes/No",
+						JOptionPane.YES_NO_OPTION);
+				break;
+			} catch (NullPointerException e) {
+				gender = "FEMALE";
+				break;
+			}
+		}
+		System.out.println(gender);
+		return gender;
+	}
+	
+	public String insertGroup() {
+		String group = "";
+		for (;;) {
+			try {
+				group = String.valueOf(JOptionPane.showInputDialog("Enter group"));
+				break;
+			} catch (NullPointerException e) {
+				break;
+			}
+		}
+		System.out.println(group);
+		return group;
+	}
+	
+	public long insertId() {
+		long id = 0; //null ???
+		for (;;) {
+			try {
+				id = Integer.valueOf(JOptionPane.showInputDialog("Enter student id number "));
+				break;
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Error number format");
+
+			} catch (NullPointerException e) {
+				break;
+			}
+		}
+		System.out.println(id);
+		return id;
+	}
+	
+	public String insertName() {
+		String name = "";
+		for (;;) {
+			try {
+				name = String.valueOf(JOptionPane.showInputDialog("Enter Group name"));
+				break;
+			} catch (NullPointerException e) {
+				break;
+			}
+		}
+		System.out.println(name);
+		return name;
+	}
+
+}
